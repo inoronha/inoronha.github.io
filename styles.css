@@ -195,7 +195,12 @@ a:hover {
 }
 
 section {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+    background-color: #212121;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 2rem 2.2rem;
+    box-sizing: border-box;
 }
 
 section h2 {
@@ -234,8 +239,10 @@ section h2 {
 
 .exp-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
+    gap: 0.2rem 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -434,6 +441,7 @@ section h2 {
     object-fit: cover;
     border-radius: 6px;
     border: 1px solid var(--muted-gray);
+    box-sizing: border-box;
 }
 
 .hobby-gallery img.trophy-img {
@@ -546,6 +554,36 @@ section h2 {
     border-bottom: 2px solid var(--purdue-gold);
 }
 
+/* Tablet and below: stack the sidebar above the content */
+@media (max-width: 900px) {
+    body {
+        font-size: 15px;
+    }
+
+    .page-wrapper {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        max-height: none;
+        margin: 1.5rem 0 0 0;
+    }
+
+    .content {
+        max-width: 100%;
+        padding: 1.5rem 0 3rem 0;
+    }
+
+    .jump-nav {
+        top: 0.5rem;
+    }
+}
+
 @media (max-width: 600px) {
     .testimonial-grid {
         grid-template-columns: 1fr;
@@ -567,5 +605,29 @@ section h2 {
         flex: 0 0 auto;
         width: 100%;
         max-width: 300px;
+    }
+    section {
+        padding: 1.5rem 1.2rem;
+    }
+    .jump-nav {
+        gap: 0.2rem;
+        padding: 0.5rem;
+    }
+    .jump-nav a {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
+    }
+    #about p {
+        text-align: left;
+    }
+    .hobby-gallery img {
+        width: calc(50% - 0.5rem);
+        height: 110px;
+    }
+    .culinary-banner img {
+        height: 160px;
+    }
+    .culinary-banner-text h3 {
+        font-size: 1.4rem;
     }
 }
