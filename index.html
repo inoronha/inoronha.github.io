@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="page-wrapper">
-        
+
         <!-- FIXED LEFT SIDEBAR -->
         <nav class="sidebar">
             <div class="sidebar-content">
                 <img src="profile.jpg" alt="Ian Noronha" class="profile-img">
-                
+
                 <div class="social-links">
                     <!-- Email as a button -->
                     <a href="mailto:inoronha@purdue.edu" title="Email"><i class="fas fa-envelope"></i> Email</a>
@@ -32,151 +32,208 @@
 
         <!-- SCROLLING RIGHT CONTENT -->
         <main class="content">
+            <nav class="jump-nav">
+                <a href="#about">About</a>
+                <a href="#conference">Conference</a>
+                <a href="#workshop">Workshop</a>
+                <a href="#in-preparation">In Preparation</a>
+                <a href="#patents">Patents</a>
+                <a href="#projects">Projects</a>
+                <a href="#awards">Awards</a>
+                <a href="#mentoring">Mentoring</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+            </nav>
+
             <section id="about">
                 <h1 class="main-name">Ian Noronha</h1>
                 <!--[cite: 1] --> <p>I am a Graduate Researcher at Purdue University, specializing in Vision for Robotics. I hold a Bachelor of Technology in Electronics and Communication Engineering from the Indian Institute of Technology, Roorkee (IIT Roorkee). My research focuses on neuromorphic perception, uncertainty-aware sensor fusion for autonomous robot navigation, and 3D scene-aware Vision-Language Model agents that bridge spatial reasoning and natural language understanding for real-world autonomous systems.</p>
                 <!--[cite: 1] --> <p>Previously, I was a Design Engineer at STMicroelectronics in the Advanced Systems Research (ASR) group, where I worked on R&D for Edge AI applications, focusing on robotics and vision.</p>
             </section>
 
-            <section id="publications">
-                <h2>Publications</h2>
-                
-                <h3>Published/Accepted Peer-Reviewed Conferences</h3>
-                <!--[cite: 1] --> <div class="pub-item">
+            <section id="conference">
+                <h2>Conference Publications</h2>
+
+                <div class="pub-item">
                     <div class="pub-image"><img src="moocap.gif" alt="MooCap"></div>
                     <div class="pub-info">
                         <div class="pub-title">MooCap: A Multi-View Benchmark for Cow-Object-Human Interaction and Behaviour Dynamics</div>
                         <div class="pub-authors"><strong>I. Noronha</strong>, H.W. Neave, U. Kaur</div>
                         <div class="pub-venue">CVPR 2026</div>
-                    </div>
-                </div>
-                
-                <!--[cite: 1] --> <div class="pub-item">
-                    <div class="pub-image"><img src="eecvs.jpg" alt="EECVS"></div>
-                    <div class="pub-info">
-                        <div class="pub-title">Efficient Event Camera Volume System</div>
-                        <div class="pub-authors"><strong>I. Noronha*</strong>, J.C. Soto*, S. Bharti, U. Kaur</div>
-                        <div class="pub-venue">ICRA 2026</div>
+                        <div class="pub-desc">Uses pose estimation and temporal action segmentation to study how upbringing shapes cow behavior.</div>
+                        <div class="pub-links"><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Noronha_MooCap_A_Multi-View_Benchmark_for_Cow-Object-Human_Interaction_and_Behavior_Dynamics_CVPR_2026_paper.html" target="_blank" rel="noopener">Paper</a><a href="https://github.com/IannoIITR/MooCap" target="_blank" rel="noopener">Code</a></div>
                     </div>
                 </div>
 
-                <!--[cite: 1] --> <div class="pub-item">
+                <div class="pub-item">
+                    <div class="pub-image"><img src="eecvs.jpg" alt="EECVS"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">Efficient Event Camera Volume System</div>
+                        <div class="pub-authors">J.C. Soto*, <strong>I. Noronha*</strong>, S. Bharti, U. Kaur</div>
+                        <div class="pub-venue">ICRA 2026</div>
+                        <div class="pub-desc">Models each event as a Dirac impulse and projects it onto DCT, DTFT, and DWT basis functions for dense, compressed event representations.</div>
+                        <div class="pub-links"><a href="https://arxiv.org/abs/2603.14738" target="_blank" rel="noopener">Paper</a><a href="https://github.com/Dookiep/EECVS/tree/master" target="_blank" rel="noopener">Code</a></div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
                     <div class="pub-image"><img src="graph.jpg" alt="Graph Coloring"></div>
                     <div class="pub-info">
                         <div class="pub-title">Graph Coloring for Multi-Task Learning</div>
                         <div class="pub-authors">S. Patapati, <strong>I. Noronha</strong></div>
                         <div class="pub-venue">ECCV 2026</div>
+                        <div class="pub-desc">Uses graph coloring on gradient conflict to schedule multi-task training and avoid gradient collisions.</div>
+                        <div class="pub-links"><a href="https://link.springer.com/chapter/10.1007/978-3-032-37429-5_28" target="_blank" rel="noopener">Paper</a></div>
                     </div>
                 </div>
 
-                <!--[cite: 1] --> <div class="pub-item">
-                    <div class="pub-image"><img src="mbeari.jpg" alt="MBE-ARI"></div>
+                <div class="pub-item">
+                    <div class="pub-image"><img src="mbeari.gif" alt="MBE-ARI"></div>
                     <div class="pub-info">
                         <div class="pub-title">MBE-ARI: A Multimodal Dataset Mapping Bi-Directional Engagement in Animal-Robot Interaction</div>
-                        <div class="pub-authors"><strong>I. Noronha*</strong>, A.P. Jawaji, J.C. Soto*, J. An, Y. Gu, U. Kaur</div>
+                        <div class="pub-authors"><strong>I. Noronha*</strong>, A.P. Jawaji*, J.C. Soto*, J. An, Y. Gu, U. Kaur</div>
                         <div class="pub-venue">ICRA 2025</div>
+                        <div class="pub-desc">Runs pose detection on both robot and cows in a shared pen to study animal-robot interaction.</div>
+                        <div class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/11127962" target="_blank" rel="noopener">Paper</a><a href="https://github.com/ARIESPurdue/MBE-ARI" target="_blank" rel="noopener">Code</a></div>
                     </div>
                 </div>
 
-                <!--[cite: 1] --> <div class="pub-item">
+                <div class="pub-item">
                     <div class="pub-image"><img src="dqnn.jpg" alt="DQNN"></div>
                     <div class="pub-info">
                         <div class="pub-title">Deeply Quantized Neural Networks: Enabling In-Sensor Computing</div>
                         <div class="pub-authors">M. Chandna, S. Suneja, L. Luise, F.V. Caruso, <strong>I. W. Noronha</strong>, H.D. Dabral, S.P. Singh</div>
                         <div class="pub-venue">ISTEMS 2024</div>
+                        <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/10560339" target="_blank" rel="noopener">Paper</a></div>
                     </div>
                 </div>
 
-                <!--[cite: 1] --> <div class="pub-item">
+                <div class="pub-item">
                     <div class="pub-image"><img src="nnmorph.jpg" alt="nn-morph"></div>
                     <div class="pub-info">
                         <div class="pub-title">nn-morph: Simplifying Deep Neural Network Manipulation, Transformation, and Analysis</div>
                         <div class="pub-authors"><strong>I. W. Noronha</strong>, S. Suneja, S.P. Singh</div>
                         <div class="pub-venue">ICCCNT 2023</div>
+                        <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/10307179" target="_blank" rel="noopener">Paper</a></div>
                     </div>
                 </div>
+            </section>
 
-                <h3 class="subsection-title">Workshop & Poster Presentations</h3>
-                <!--[cite: 1] --> <div class="pub-item">
-                    <div class="pub-image"><img src="quad.jpg" alt="Quad"></div>
+            <section id="workshop">
+                <h2>Workshop &amp; Poster Presentations</h2>
+
+                <div class="pub-item">
+                    <div class="pub-image pub-image-multi">
+                        <img src="quad1.gif" alt="Quad Forecaster, cheetah sprint gait">
+                        <img src="quad2.gif" alt="Quad Forecaster, cheetah run gait">
+                        <img src="quad3.gif" alt="Quad Forecaster, trotting gait">
+                    </div>
                     <div class="pub-info">
                         <div class="pub-title">Quad Forecaster: Diffusion-Based Quadruped Pose Prediction for Animal Communication Analysis</div>
-                        <div class="pub-authors"><strong>I. Noronha</strong>, A. Chowdhury, S. Bharti, U. Kaur</div>
+                        <div class="pub-authors"><strong>I. Noronha*</strong>, A. Chowdhury*, S. Bharti, U. Kaur</div>
                         <div class="pub-venue">NeurIPS Workshop 2025</div>
+                        <div class="pub-desc">Diffusion model for forecasting animal poses, used as a planning signal for autonomous monitoring robots.</div>
+                        <div class="pub-links"><a href="https://openreview.net/forum?id=tqSRcqCpqJ" target="_blank" rel="noopener">Paper</a></div>
                     </div>
                 </div>
 
-                <!--[cite: 1] --> <div class="pub-item">
+                <!-- Commented out ICRA Workshop paper as requested -->
+                <!--
+                <div class="pub-item">
                     <div class="pub-image"><img src="spatio.jpg" alt="Spatiotemporal"></div>
                     <div class="pub-info">
                         <div class="pub-title">Spatiotemporal Representations for Event Cameras: Towards Seamless Integration in Robotic Perception</div>
                         <div class="pub-authors"><strong>I. Noronha</strong>, J.C. Soto, U. Kaur</div>
                         <div class="pub-venue">ICRA Workshop 2025</div>
+                        <div class="pub-desc">Spatiotemporal event representations for direct integration into robotic perception pipelines.</div>
+                    </div>
+                </div>
+                -->
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="mmwave.jpg" alt="Feel the Ground"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">Feel the Ground: Radar-based Terrain Classification towards Gait Adaptation in Legged Robots</div>
+                        <div class="pub-authors">S. Bharti, <strong>I. Noronha</strong>, G. Torres, U. Kaur</div>
+                        <div class="pub-venue">IROS LBR 2026</div>
+                        <div class="pub-desc">Classifies terrain from mmWave radar point clouds for gait adaptation in legged robots.</div>
                     </div>
                 </div>
 
-                <!--[cite: 1] --> <div class="pub-item">
-                    <div class="pub-image"><img src="field.jpg" alt="FieldSense"></div>
+                <div class="pub-item">
+                    <div class="pub-image"><img src="field.gif" alt="FieldSense"></div>
                     <div class="pub-info">
                         <div class="pub-title">FieldSense: Real-Time Plant Disease Detection for Precision Agriculture</div>
-                        <div class="pub-authors"><strong>I. Noronha*</strong>, S. Bharti*, J.C. Soto*, A. Raturi, D.R. Buckmaster, U. Kaur</div>
+                        <div class="pub-authors">S. Bharti*, <strong>I. Noronha*</strong>, J.C. Soto*, A. Raturi, D.R. Buckmaster, U. Kaur</div>
                         <div class="pub-venue">ASABE 2026 (Oral)</div>
+                        <div class="pub-desc">Two-stage leaf segmentation and disease classification running in real time on a Raspberry Pi.</div>
                     </div>
                 </div>
 
-                <!--[cite: 1] --> <div class="pub-item">
-                    <div class="pub-image"><img src="mmwave.jpg" alt="MMWave"></div>
+                <div class="pub-item">
+                    <div class="pub-image"><img src="grain.jpg" alt="MMWave"></div>
                     <div class="pub-info">
                         <div class="pub-title">MM-Wave Radar Identification of Cavities in Grain Storage Systems to Prevent Entrapment</div>
                         <div class="pub-authors">S. Bharti, <strong>I. Noronha</strong>, A. Agarwal, S.N. Doctor, R.P.K. Ambrose, U. Kaur</div>
                         <div class="pub-venue">ASABE 2026 (Oral)</div>
+                        <div class="pub-desc">Fuses RGBD and mmWave radar to detect hidden cavities and deformities beneath surfaces.</div>
                     </div>
                 </div>
 
-                <!--[cite: 1] --> <div class="pub-item">
-                    <div class="pub-image"><img src="pipebot.jpg" alt="PipeBot"></div>
-                    <div class="pub-info">
-                        <div class="pub-title">PipeBot: Autonomous Inspection and Surveying Robot for Agricultural Drain Tiles</div>
-                        <div class="pub-authors"><strong>I. Noronha*</strong>, Y. Deng*, J.C. Soto*, R.M. Voyles, U. Kaur</div>
-                        <div class="pub-venue">ASABE 2026 (Lightning)</div>
-                    </div>
-                </div>
+            </section>
 
-                <!--
-                <h3 class="subsection-title">Manuscripts Under Review</h3>
+            <section id="in-preparation">
+                <h2>Manuscripts in Preparation</h2>
+
                 <div class="pub-item">
                     <div class="pub-image"><img src="emotion.jpg" alt="E-motion"></div>
                     <div class="pub-info">
                         <div class="pub-title">E-motion: High Fidelity Event Generation from Frame-Based Input for Neuromorphic Vision</div>
-                        <div class="pub-authors"><strong>I. Noronha</strong>, J.C. Soto, S. Singh, P. Chitiveli, U. Kaur</div>
-                        <div class="pub-venue">NeurIPS 2026</div>
+                        <div class="pub-authors"><strong>I. Noronha</strong>, J.C. Soto, S. Bharti, S. Singh, P. Chitiveli, J. Wachs, U. Kaur</div>
+                        <div class="pub-venue">WACV 2026</div>
+                        <div class="pub-desc">Motion Former limits event interpolation to the change between two frames, using dual decoders for event occurrence and microsecond-precise timestamps.</div>
                     </div>
                 </div>
-                
+
+                <!-- Commented out Beyond the Turing Test as requested -->
+                <!--
                 <div class="pub-item">
-                    <div class="pub-image"><img src="remode.jpg" alt="ReMODE"></div>
-                    <div class="pub-info">
-                        <div class="pub-title">ReMODE: Reliable Motion and Depth Estimation from Uncertainty-Aware Stereo Event Perception</div>
-                        <div class="pub-authors"><strong>I. Noronha</strong>, S. Bharti, U. Kaur</div>
-                        <div class="pub-venue">RA-L</div>
-                    </div>
-                </div>
-                
-                <div class="pub-item">
-                    <div class="pub-image"><img src="turing.jpg" alt="Turing"></div>
+                    <div class="pub-image"><img src="turing.jpg" alt="Beyond the Turing Test"></div>
                     <div class="pub-info">
                         <div class="pub-title">Beyond the Turing Test: A Game Theoretic Approach to LLM-Assisted Submissions</div>
                         <div class="pub-authors">S. Bharti, <strong>I. Noronha</strong></div>
                         <div class="pub-venue">NeurIPS 2026</div>
                     </div>
                 </div>
-                
+                -->
+
                 <div class="pub-item">
-                    <div class="pub-image"><img src="sem_skel.jpg" alt="SemanticSkeleton"></div>
+                    <div class="pub-image"><img src="elevation.jpg" alt="Elevation from Range"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">Elevation from Range: Cold-start mmWave Radar-Camera Calibration</div>
+                        <div class="pub-authors"><strong>I. Noronha*</strong>, S. Bharti*, G. Torres, U. Kaur</div>
+                        <div class="pub-venue">RA-L</div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="semskel.jpg" alt="SemanticSkeleton"></div>
                     <div class="pub-info">
                         <div class="pub-title">SemanticSkeleton: Canonizing Quadruped Skeletons for Cross-Skeletal Pose Forecasting</div>
-                        <div class="pub-authors">A. Chowdhury, U. Kaur, <strong>I. Noronha</strong></div>
+                        <div class="pub-authors">A. Chowdhury, <strong>I. Noronha&dagger;</strong>, U. Kaur</div>
                         <div class="pub-venue">WACV 2026</div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="pub-item">
+                    <div class="pub-image"><img src="remode.gif" alt="ReMODE"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">ReMODE: Reliable Motion and Depth Estimation from Uncertainty-Aware Stereo Event Perception</div>
+                        <div class="pub-authors"><strong>I. Noronha</strong>, S. Bharti, U. Kaur</div>
+                        <div class="pub-venue">DSEC Challenge</div>
+                        <div class="pub-desc">Predicts disparity and optical flow from stereo event cameras with per-pixel uncertainty estimation, on the DSEC Challenge benchmark.</div>
                     </div>
                 </div>
                 -->
@@ -204,21 +261,183 @@
                     </div>
                 </div>
                 -->
-                
-                <!--[cite: 1] --> <p class="asterisk"><em>* Denotes equal contribution</em></p>
+
+                <p class="asterisk"><em>* Denotes equal contribution. &dagger; Denotes project lead.</em></p>
             </section>
 
             <section id="patents">
                 <h2>Patents</h2>
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="snake-robot.jpg" alt="Untethered Soft Snake Robot"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">Untethered Soft Snake Robot</div>
+                        <div class="pub-authors">Inventors: G. Bhandari, Y. Pirjade, P.M. Pathak, <strong>I.W. Noronha</strong>, J.M. Yang</div>
+                        <div class="pub-venue">IN 492402. Granted Jan 2024</div>
+                        <div class="pub-desc">Serpentine gait control for an untethered soft pneumatic robot.</div>
+                        <div class="pub-links"><a href="https://drive.google.com/file/d/1o9cQXpCu3-DtQqVfzfZgstMcND7EQBF2/view?usp=drivesdk" target="_blank" rel="noopener">Patent</a></div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="patient-reg.jpg" alt="Non-contact Patient Registration and Monitoring System"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">Non-contact Patient Registration and Monitoring System</div>
+                        <div class="pub-authors">Inventors: P.M. Pathak, <strong>I.W. Noronha</strong></div>
+                        <div class="pub-venue">IN 479029. Granted Dec 2023</div>
+                        <div class="pub-desc">TARA: contactless patient registration with regional-language speech recognition, deployed in clinics. Led to the founding of Robolife Ltd., valued at $800K.</div>
+                        <div class="pub-links"><a href="https://drive.google.com/file/d/1qeNUIuuQBJhRGIdIlLrlpi3-Y-U3fnV5/view?usp=sharing" target="_blank" rel="noopener">Patent</a><a href="tara.html">More photos &rarr;</a></div>
+                    </div>
+                </div>
+
                 <ul class="clean-list">
-                    <!--[cite: 1] --> <li><strong>mmWave Radar system with AI for Sub-Wavelength Detection of Hidden Small Organisms</strong> (US Provisional)</li>
-                    <!--[cite: 1] --> <li><strong>Radar-based system and method for detecting structural anomalies in granular materials</strong> (US Provisional)</li>
-                    <!--[cite: 1] --> <li><strong>Untethered Soft Snake Robot</strong> (Granted Jan 2024, IN 492402)</li>
-                    <!--[cite: 1] --> <li><strong>Non-contact Patient Registration and Monitoring System</strong> (Granted Dec 2023, IN 479029)</li>
+                    <li><strong>mmWave Radar system with AI for Sub-Wavelength Detection of Hidden Small Organisms</strong> (US Provisional)<br>
+                    <span class="pub-venue">Inventors: U. Kaur, I. Noronha, S. Bharti, M. Murgia, C. Hill</span></li>
+                    <li><strong>Radar-based system and method for detecting structural anomalies in granular materials</strong> (US Provisional)<br>
+                    <span class="pub-venue">Inventors: U. Kaur, I. Noronha, S. Bharti, R.P.K. Ambrose</span></li>
                 </ul>
             </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="qnafnet.jpg" alt="Quantized NAFNet"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">Quantized NAFNet: Image Deblurring on Constrained Hardware</div>
+                        <div class="pub-venue">8-bit Quantization-Aware Training &amp; Structural Pruning</div>
+                        <div class="pub-desc">259MB to 14.5MB, 16&times; faster on software, 40&times; on hardware, 95% accuracy retained.</div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="orbslam.gif" alt="RGBD ORB-SLAM3"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">RGBD ORB-SLAM3 with Ultra-Low-Power Mono-Depth</div>
+                        <div class="pub-desc">2MB mono-depth model trained on KITTI, running at 22fps on STM32N6. ORB-SLAM3 and ROS1 deployed on STM32MP1 via Yocto.</div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="gesture.jpg" alt="IMU Gesture Recognition"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">IMU-Based Gesture Recognition on ISPU</div>
+                        <div class="pub-desc">11-class gesture recognition running entirely on the ISPU, within 27KB RAM. 3rd Place, IEEE COINS TinyML Contest.</div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="hexapod.gif" alt="Hexapod"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">Hexapod RL &amp; Path Planning</div>
+                        <div class="pub-venue">Course Project</div>
+                        <div class="pub-desc">Actor-critic reinforcement learning with PPO and RRT* planning for hexapod and tripod gaits on a custom 3D-printed platform.</div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-image"><img src="pipebot.gif" alt="PipeBot"></div>
+                    <div class="pub-info">
+                        <div class="pub-title">PipeBot: Autonomous Inspection and Surveying Robot for Agricultural Drain Tiles</div>
+                        <div class="pub-venue">ASABE 2026 (Lightning)</div>
+                        <div class="pub-desc">Autonomous robot for inspecting buried corrugated drainage pipes. A spiking neural network localizes from event-camera and IMU data alone, exploiting the corrugation pattern without GPS or excavation.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="awards">
+                <h2>Awards</h2>
+                <ul class="clean-list">
+                    <li><strong>1st Place</strong>, SyDAG Hackathon (International) <span class="exp-date">Oct 2025</span></li>
+                    <li><strong>3rd Place</strong>, IEEE COINS TinyML Contest (International) <span class="exp-date">Jul 2023</span></li>
+                    <li><strong>Special Recognition Award</strong>, STMicroelectronics Tech Week Hackathon (International) <span class="exp-date">Mar 2023</span></li>
+                    <li><strong>3rd Place</strong>, WiFi Thinkfest (National) <span class="exp-date">Apr 2018</span></li>
+                    <li><strong>1st Place</strong>, Inter-IIT Technical Meet (National), Project: Safety Device for Fishing Vessels <span class="exp-date">Jan 2018</span></li>
+                    <li><strong>2nd Place</strong>, Pitney Bowes SMB Hackathon (International) <span class="exp-date">Jan 2018</span></li>
+                    <li><strong>1st Place</strong>, Srishti IIT Roorkee Technical Fest, Project: Interactive VR in Gaming <span class="exp-date">Jul 2017</span></li>
+                </ul>
+            </section>
+
+            <section id="mentoring">
+                <h2>Mentoring</h2>
+                <p>Mentoring 12 undergraduate and graduate researchers at the ARIES Lab. Nominated by 10 for a mentorship award. <a href="testimonials.html">Read their testimonials &rarr;</a></p>
+            </section>
+
+            <section id="hobbies">
+                <h2>Hobbies</h2>
+                <p>Outside the lab: cooking, anime, and gaming.</p>
+
+                <div class="culinary-banner">
+                    <img src="culinary-hero.jpg" alt="Culinary Club, IIT Roorkee">
+                    <div class="culinary-banner-text">
+                        <span class="script">Welcome to</span>
+                        <h3>Culinary Club, IIT Roorkee</h3>
+                        <p>India's first student-run cafe</p>
+                    </div>
+                </div>
+
+                <p>Co-founded the Culinary Club and introduced the first student-run cafeteria in IIT, with events drawing 100+ participants. Spearheaded national events at Inter-IIT Cultural meets, a model since followed by culinary clubs across the IITs. <a href="https://www.iitr.ac.in/culinaryclub/" target="_blank" rel="noopener">iitr.ac.in/culinaryclub &rarr;</a></p>
+
+                <p><a href="hobbies.html">More photos &rarr;</a></p>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Graduate Research Assistant, ARIES Lab, Purdue University</h3>
+                        <span class="exp-date">Aug 2024 - Present</span>
+                    </div>
+                    <p>Leading research on neuromorphic perception, sensor fusion, and 3D scene-aware VLM agents. Mentoring 12 researchers.</p>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Design Engineer, Advanced Systems Research, STMicroelectronics</h3>
+                        <span class="exp-date">Apr 2021 - Jun 2024</span>
+                    </div>
+                    <p>Led Robotics and Vision research, CEO's commendation for embodied AI work. Mapped ViT layers onto in-memory-compute tiles for a 40% accuracy gain. Built SLAM and depth models for STM32 hardware.</p>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Research Fellow, Robotics and Control Lab, IIT Roorkee</h3>
+                        <span class="exp-date">Mar 2020 - Apr 2021</span>
+                    </div>
+                    <p>Built a voice-controlled, non-contact patient registration system, deployed at a hospital. Contributed to founding Robolife Ltd., valued at $800K.</p>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Business Technology Analyst, Deloitte USI</h3>
+                        <span class="exp-date">Jun 2019 - Mar 2020</span>
+                    </div>
+                    <p>Built data archival automation for JP Morgan Chase. Developed a drone-based mapping application.</p>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Purdue University</h3>
+                        <span class="exp-date">Aug 2024 - Ongoing</span>
+                    </div>
+                    <p>Graduate Researcher, Vision for Robotics. GPA: 3.89/4.0</p>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Indian Institute of Technology, Roorkee (IIT Roorkee)</h3>
+                        <span class="exp-date">2019</span>
+                    </div>
+                    <p>Bachelor of Technology in Electronics and Communication Engineering</p>
+                </div>
+            </section>
         </main>
-        
+
     </div>
 </body>
-      
+</html>
