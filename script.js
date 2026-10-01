@@ -1,20 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('#navbar a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Get the target section ID from the href attribute
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                // Scroll smoothly to the section, accounting for the sticky navbar
-                window.scrollTo({
-                    top: targetSection.offsetTop - 60,
-                    behavior: 'smooth'
-                });
-            }
+    const navLinks = document.querySelectorAll('.jump-nav a');
+    if (!navLinks.length) return;
+
+    const sections = Array.from(navLinks)
+        .map(link => document.getElementById(link.getAttribute('href').substring(1)))
+        .filter(Boolean);
+
+    const setActive = (id) => {
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
         });
-    });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        const visible = entries.filter(e => e.isIntersecting);
+        if (visible.length) {
+            visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+            setActive(visible[0].target.id);
+        }
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+
+    sections.forEach(section => observer.observe(section));
 });

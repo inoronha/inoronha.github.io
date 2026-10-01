@@ -14,18 +14,30 @@
         <nav class="sidebar">
             <div class="sidebar-content">
                 <img src="profile.jpg" alt="Ian Noronha" class="profile-img">
+                <h1 class="sidebar-name">Ian Noronha</h1>
+                <span class="sidebar-badge">Vision for Robotics</span>
 
-                <div class="social-links">
-                    <!-- Email as a button -->
-                    <a href="mailto:inoronha@purdue.edu" title="Email"><i class="fas fa-envelope"></i> Email</a>
-                    <!-- Google Scholar -->
-                    <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;hl=en&amp;user=65HXZ0gAAAAJ" title="Google Scholar"><i class="fas fa-graduation-cap"></i> Scholar</a>
-                    <!-- LinkedIn -->
-                    <a href="https://linkedin.com/in/ian-noronha-iitr/" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <!-- GitHub -->
-                    <a href="https://github.com/IannoIITR" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                    <!-- CV -->
-                    <a href="Ian_noronha_res.pdf" title="CV"><i class="fas fa-file-pdf"></i> CV</a>
+                <div class="contact-list">
+                    <a class="contact-item" href="mailto:inoronha@purdue.edu" title="Email">
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <span class="contact-text"><span class="contact-label">Email</span><span class="contact-value">inoronha@purdue.edu</span></span>
+                    </a>
+                    <a class="contact-item" href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;hl=en&amp;user=65HXZ0gAAAAJ" title="Google Scholar" target="_blank" rel="noopener">
+                        <span class="contact-icon"><i class="fas fa-graduation-cap"></i></span>
+                        <span class="contact-text"><span class="contact-label">Google Scholar</span><span class="contact-value">View Profile</span></span>
+                    </a>
+                    <a class="contact-item" href="https://linkedin.com/in/ian-noronha-iitr/" title="LinkedIn" target="_blank" rel="noopener">
+                        <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                        <span class="contact-text"><span class="contact-label">LinkedIn</span><span class="contact-value">ian-noronha-iitr</span></span>
+                    </a>
+                    <a class="contact-item" href="https://github.com/IannoIITR" title="GitHub" target="_blank" rel="noopener">
+                        <span class="contact-icon"><i class="fab fa-github"></i></span>
+                        <span class="contact-text"><span class="contact-label">GitHub</span><span class="contact-value">IannoIITR</span></span>
+                    </a>
+                    <a class="contact-item" href="Ian_noronha_res.pdf" title="CV">
+                        <span class="contact-icon"><i class="fas fa-file-pdf"></i></span>
+                        <span class="contact-text"><span class="contact-label">Resume</span><span class="contact-value">Download PDF</span></span>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -47,7 +59,8 @@
             </nav>
 
             <section id="about">
-                <h1 class="main-name">Ian Noronha</h1>
+                <h1 class="main-name">About Me</h1>
+                <hr class="heading-accent">
                 <!--[cite: 1] --> <p>I am a Graduate Researcher at Purdue University, specializing in Vision for Robotics. I hold a Bachelor of Technology in Electronics and Communication Engineering from the Indian Institute of Technology, Roorkee (IIT Roorkee). My research focuses on neuromorphic perception, uncertainty-aware sensor fusion for autonomous robot navigation, and 3D scene-aware Vision-Language Model agents that bridge spatial reasoning and natural language understanding for real-world autonomous systems.</p>
                 <!--[cite: 1] --> <p>Previously, I was a Design Engineer at STMicroelectronics in the Advanced Systems Research (ASR) group, where I worked on R&D for Edge AI applications, focusing on robotics and vision.</p>
             </section>
@@ -385,35 +398,47 @@
                 <h2>Experience</h2>
 
                 <div class="exp-item">
-                    <div class="exp-header">
-                        <h3>Graduate Research Assistant, ARIES Lab, Purdue University</h3>
-                        <span class="exp-date">Aug 2024 - Present</span>
+                    <img class="exp-logo" src="logos/purdue.png" alt="Purdue University logo">
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <h3>Graduate Research Assistant, ARIES Lab, Purdue University</h3>
+                            <span class="exp-date">Aug 2024 - Present</span>
+                        </div>
+                        <p>Leading research on neuromorphic perception, sensor fusion, and 3D scene-aware VLM agents. Mentoring 12 researchers.</p>
                     </div>
-                    <p>Leading research on neuromorphic perception, sensor fusion, and 3D scene-aware VLM agents. Mentoring 12 researchers.</p>
                 </div>
 
                 <div class="exp-item">
-                    <div class="exp-header">
-                        <h3>Design Engineer, Advanced Systems Research, STMicroelectronics</h3>
-                        <span class="exp-date">Apr 2021 - Jun 2024</span>
+                    <img class="exp-logo" src="logos/stmicroelectronics.png" alt="STMicroelectronics logo">
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <h3>Design Engineer, Advanced Systems Research, STMicroelectronics</h3>
+                            <span class="exp-date">Apr 2021 - Jun 2024</span>
+                        </div>
+                        <p>Led Robotics and Vision research, CEO's commendation for embodied AI work. Mapped ViT layers onto in-memory-compute tiles for a 40% accuracy gain. Built SLAM and depth models for STM32 hardware.</p>
                     </div>
-                    <p>Led Robotics and Vision research, CEO's commendation for embodied AI work. Mapped ViT layers onto in-memory-compute tiles for a 40% accuracy gain. Built SLAM and depth models for STM32 hardware.</p>
                 </div>
 
                 <div class="exp-item">
-                    <div class="exp-header">
-                        <h3>Research Fellow, Robotics and Control Lab, IIT Roorkee</h3>
-                        <span class="exp-date">Mar 2020 - Apr 2021</span>
+                    <img class="exp-logo" src="logos/iitr.png" alt="IIT Roorkee logo">
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <h3>Research Fellow, Robotics and Control Lab, IIT Roorkee</h3>
+                            <span class="exp-date">Mar 2020 - Apr 2021</span>
+                        </div>
+                        <p>Built a voice-controlled, non-contact patient registration system, deployed at a hospital. Contributed to founding Robolife Ltd., valued at $800K.</p>
                     </div>
-                    <p>Built a voice-controlled, non-contact patient registration system, deployed at a hospital. Contributed to founding Robolife Ltd., valued at $800K.</p>
                 </div>
 
                 <div class="exp-item">
-                    <div class="exp-header">
-                        <h3>Business Technology Analyst, Deloitte USI</h3>
-                        <span class="exp-date">Jun 2019 - Mar 2020</span>
+                    <img class="exp-logo" src="logos/deloitte.png" alt="Deloitte logo">
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <h3>Business Technology Analyst, Deloitte USI</h3>
+                            <span class="exp-date">Jun 2019 - Mar 2020</span>
+                        </div>
+                        <p>Built data archival automation for JP Morgan Chase. Developed a drone-based mapping application.</p>
                     </div>
-                    <p>Built data archival automation for JP Morgan Chase. Developed a drone-based mapping application.</p>
                 </div>
             </section>
 
@@ -421,23 +446,30 @@
                 <h2>Education</h2>
 
                 <div class="exp-item">
-                    <div class="exp-header">
-                        <h3>Purdue University</h3>
-                        <span class="exp-date">Aug 2024 - Ongoing</span>
+                    <img class="exp-logo" src="logos/purdue.png" alt="Purdue University logo">
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <h3>Purdue University</h3>
+                            <span class="exp-date">Aug 2024 - Ongoing</span>
+                        </div>
+                        <p>Graduate Researcher, Vision for Robotics. GPA: 3.89/4.0</p>
                     </div>
-                    <p>Graduate Researcher, Vision for Robotics. GPA: 3.89/4.0</p>
                 </div>
 
                 <div class="exp-item">
-                    <div class="exp-header">
-                        <h3>Indian Institute of Technology, Roorkee (IIT Roorkee)</h3>
-                        <span class="exp-date">2019</span>
+                    <img class="exp-logo" src="logos/iitr.png" alt="IIT Roorkee logo">
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <h3>Indian Institute of Technology, Roorkee (IIT Roorkee)</h3>
+                            <span class="exp-date">2019</span>
+                        </div>
+                        <p>Bachelor of Technology in Electronics and Communication Engineering</p>
                     </div>
-                    <p>Bachelor of Technology in Electronics and Communication Engineering</p>
                 </div>
             </section>
         </main>
 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

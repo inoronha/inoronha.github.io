@@ -35,14 +35,21 @@ h1, h2, h3, h4, strong, b {
     font-weight: 600;
 }
 
-/* Center and scale the main name */
 .main-name {
-    text-align: center;
-    font-size: 3.5rem; /* Makes the name significantly larger */
+    text-align: left;
+    font-size: 2rem;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0.6rem;
     color: var(--purdue-gold);
-    border-bottom: none; /* Removes the underline if it exists */
+    border-bottom: none;
+}
+
+.heading-accent {
+    width: 46px;
+    height: 3px;
+    background-color: var(--purdue-gold);
+    border: none;
+    margin: 0 0 1.8rem 0;
 }
 
 a {
@@ -66,67 +73,113 @@ a:hover {
 /* Sticky Left Sidebar */
 .sidebar {
     position: sticky;
-    top: 0;
-    width: 320px;
-    height: 100vh;
-    /* Increase the top padding to push items down */
-    padding: 6rem 2rem 2rem 2rem; 
+    top: 2rem;
+    width: 300px;
+    max-height: calc(100vh - 4rem);
+    margin: 2rem 0 2rem 0;
+    padding: 2.5rem 1.8rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     flex-shrink: 0;
+    background-color: #212121;
+    border: 1px solid #333;
+    border-radius: 16px;
 }
 
 .profile-img {
-    width: 160px;
-    height: 220px; /* Taller height creates the rectangle */
-    border-radius: 0; /* 0 makes the corners sharp. Change to 8px for slightly rounded corners */
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
     object-fit: cover;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     border: 2px solid var(--purdue-gold);
 }
 
-.sidebar h1 {
-    font-size: 1.8rem;
-    margin: 0 0 0.2rem 0;
+.sidebar-name {
+    font-size: 1.4rem;
+    margin: 0 0 0.6rem 0;
 }
 
-.sidebar h2 {
-    font-size: 1rem;
-    color: var(--text-white);
-    font-weight: 400;
-    margin: 0 0 0.5rem 0;
+.sidebar-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--purdue-gold);
+    border: 1px solid var(--purdue-gold);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    margin-bottom: 1.8rem;
 }
 
-.sidebar p {
-    font-size: 0.9rem;
-    color: var(--muted-gray);
+.sidebar hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #333;
     margin: 0 0 1.5rem 0;
 }
 
-.contact-info {
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-}
-
-.social-links {
+.contact-list {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
 }
 
-.social-links a {
-    font-size: 0.9rem;
-    color: var(--text-white);
+.contact-item {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 0.8rem;
+    padding: 0.55rem 0.7rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-align: left;
+    transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-.social-links a:hover {
+.contact-item:hover {
+    border-color: var(--purdue-gold);
+    background-color: rgba(207, 185, 145, 0.06);
+}
+
+.contact-icon {
+    flex: 0 0 34px;
+    height: 34px;
+    border: 1.5px solid var(--purdue-gold);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purdue-gold);
+    font-size: 0.9rem;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.contact-label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted-gray);
+}
+
+.contact-value {
+    font-size: 0.82rem;
+    color: var(--text-white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-item:hover .contact-value {
     color: var(--purdue-gold);
 }
 
@@ -161,7 +214,22 @@ section h2 {
 
 /* Experience Styling */
 .exp-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
     margin-bottom: 2rem;
+}
+
+.exp-logo {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.exp-body {
+    flex: 1;
+    min-width: 0;
 }
 
 .exp-header {
@@ -447,25 +515,35 @@ section h2 {
 .jump-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 1.2rem;
-    padding: 0.8rem 0 1.5rem 0;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #333;
+    gap: 0.3rem;
+    padding: 0.7rem;
+    margin-bottom: 2.5rem;
+    background-color: #212121;
+    border: 1px solid #333;
+    border-radius: 12px;
     position: sticky;
-    top: 0;
-    background-color: var(--bg-black);
+    top: 1rem;
     z-index: 10;
 }
 
 .jump-nav a {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--text-white);
+    color: var(--muted-gray);
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    border-bottom: 2px solid transparent;
 }
 
 .jump-nav a:hover {
+    color: var(--text-white);
+}
+
+.jump-nav a.active {
     color: var(--purdue-gold);
+    border-bottom: 2px solid var(--purdue-gold);
 }
 
 @media (max-width: 600px) {
